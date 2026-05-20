@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+:root {
+  --white:      #FFFFFF;
+  --black:      #2E2E38;
+  --pink:       #F56684;
+  --soft-pink:  #FCE3EC;
+  --lilac:      #C8A9D4;
+  --bg:         #F8F4EE;
+  --gray-light: #E9E7E4;
+  --gray-mid:   #9B9B9B;
+  --nav-bg:     #FCE3EC;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: var(--bg);
+  color: var(--black);
+  min-height: 100vh;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: 'Playfair Display', serif; cursor: pointer; }
+input, textarea, select { font-family: 'Playfair Display', serif; }
+
+.btn-primary {
+  background: var(--pink);
+  color: var(--white);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: opacity .2s;
+}
+.btn-primary:hover { opacity: .85; }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--pink);
+  border: 2px solid var(--pink);
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: .95rem;
+  transition: background .2s, color .2s;
+}
+.btn-secondary:hover { background: var(--pink); color: var(--white); }
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: .8rem; }
+.badge-confirmed   { background: #FCE3EC; color: #b5516e; }
+.badge-unconfirmed { background: #dbeeff; color: #2471a3; }
+.badge-pending     { background: #ede0f5; color: #7b5ea7; }
+.badge-blue        { background: #dbeeff; color: #1a6fa3; }

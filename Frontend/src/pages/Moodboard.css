@@ -1,0 +1,32 @@
+.moodboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.moodboard-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.moodboard-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .3s;
+}
+.moodboard-item:hover img { transform: scale(1.04); }
+
+.moodboard-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.3);
+  display: flex; align-items: flex-end; justify-content: space-between;
+  padding: 10px 12px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.moodboard-item:hover .moodboard-overlay { opacity: 1; }
+
+.moodboard-cat { color: #fff; font-size: .8rem; }
+.moodboard-del { background: none; border: none; color: #fff; font-size: 1.1rem; }
