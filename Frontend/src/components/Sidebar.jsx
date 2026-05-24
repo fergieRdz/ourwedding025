@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import './Sidebar.css';
 
@@ -17,9 +17,10 @@ const links = [
 
 export default function Navbar() {
   const { logout } = useAuth();
+  const navigate = useNavigate();
   return (
     <nav className="topnav">
-      <span className="topnav-brand">Our Wedding</span>
+      <span className="topnav-brand" onClick={() => navigate('/dashboard')} style={{ cursor: 'pointer' }}>Our Wedding</span>
       <ul className="topnav-links">
         {links.map(l => (
           <li key={l.to}>
